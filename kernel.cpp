@@ -1,6 +1,6 @@
-#include "lib/terminal.h"
+#include "lib/stdio.h"
 
 extern "C" void kmain(void) {
-	term_init();
+	stdio_init();
 	print("Hello");
 }
