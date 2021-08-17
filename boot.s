@@ -27,3 +27,4 @@ _start:
 	jmp 1b
 
 .size _start, . - _start
+
