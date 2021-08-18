@@ -6,5 +6,5 @@ i686-elf-as boot.s -o boot.o
 i686-elf-g++ -c kernel.cpp -o kernel.o -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti
 i686-elf-g++ -T linker.ld -o (filename).bin -ffreestanding -O2 -nostdlib boot.o kernel.o -lgcc
 ```
-## How to prepare for GRUB
+## How to use with GRUB
 ¯\\\_(ツ)\_/¯
