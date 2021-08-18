@@ -65,6 +65,15 @@ void putat(char c, uint8_t color, size_t x, size_t y) {
 	buffer[index] = vga_entry(c, color);
 }
 
+void clear() {
+	for (size_t y = 0; y < VGA_HEIGHT; y++) {
+		for (size_t x = 0; x < VGA_WIDTH; x++) {
+			const size_t index = y * VGA_WIDTH + x;
+			buffer[index] = vga_entry(' ', color);
+		}
+	}
+}
+
 void putchar(char c) {
 	putat(c, color, column, row);
 	if (++column == VGA_WIDTH) {
@@ -81,4 +90,9 @@ void write(const char* data, size_t size) {
 
 void print(const char* data) {
 	write(data, strlen(data));
+}
+
+void newline() {
+	row++;
+	column = 0;
 }

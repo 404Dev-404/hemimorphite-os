@@ -1,6 +1,8 @@
 #include "lib/stdio.h"
+#include "lib/error.h"
 
 extern "C" void kmain(void) {
 	stdio_init();
-	print("Hello");
+	print("test");
+	panic("Panic Test");
 }
